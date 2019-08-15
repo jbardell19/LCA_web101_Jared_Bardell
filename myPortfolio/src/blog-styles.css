@@ -1,9 +1,9 @@
 h1
 {
-    
     font-family: 'Pacifico', cursive;
     width: 60%;
-    margin: 5%; auto
+    margin: 5% auto;
+    text-align: center;
 }
 body
 {
@@ -11,12 +11,31 @@ body
 }
 main
 {
-    background: green
+    background: #807C7C;
     width: 60%;
-    margin: 5%; auto
+    margin: 5% auto;
+}
+article {
+    background: white;
+    border: 2px solid grey;
+    margin: 1% auto; 
+    width: 60%;
 }
 
-article
-{
-    border: solid grey 2px;
+article > h3{
+    font-size: 1em;
+}
+
+article:hover{
+
+    background: red;
+}
+
+article:hover > h3{
+    color: grey;
+}
+
+footer {
+font-family: 'Pacifico', cursive;
+color: white;
 }
