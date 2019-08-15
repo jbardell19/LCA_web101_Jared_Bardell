@@ -1,0 +1,22 @@
+h1
+{
+    
+    font-family: 'Pacifico', cursive;
+    width: 60%;
+    margin: 5%; auto
+}
+body
+{
+    background:grey;
+}
+main
+{
+    background: green
+    width: 60%;
+    margin: 5%; auto
+}
+
+article
+{
+    border: solid grey 2px;
+}
