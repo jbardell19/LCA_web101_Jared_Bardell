@@ -9,6 +9,10 @@ body
 {
     background:grey;
 }
+
+navbar{
+    
+}
 main
 {
     background: #807C7C;
@@ -24,6 +28,8 @@ article {
 
 article > h3{
     font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
 }
 
 article:hover{
