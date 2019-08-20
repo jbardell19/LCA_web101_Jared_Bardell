@@ -1,0 +1,41 @@
+header{
+    background: #807C7C;
+    width: 60%;
+    margin: 5% auto
+}
+
+
+h1
+{
+    font-family: 'Pacifico', cursive;
+    width: 60%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+h2
+{
+    font-family: 'Livvic', sans-serif;
+    margin: 5% auto;
+    width: 60%;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Livvic', sans-serif;
+    margin: 5% auto;
+    width: 60%;
+    text-align: center;
+}
+
+main {
+
+        width: 60%;
+        border: 5px solid grey;
+        padding: 8 px;
+        margin: 5% auto;
+        text-align: center;
+
+}
