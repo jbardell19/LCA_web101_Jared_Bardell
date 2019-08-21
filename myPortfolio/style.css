@@ -79,7 +79,7 @@ body {
   button {
     grid-column: 2/3;
     margin: 3% auto;
-    width: 70%;
+    width: fit-content;
     font-family: 'Comfortaa', cursive;
     font-size: 20px;
     border-radius: 25px;
@@ -91,3 +91,24 @@ body {
     letter-spacing: 16px;
     font-style: italic;
   }
+  /* Extra Small and up (Portrait Phones) */
+
+/* Small and up (Landscape Phones) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium and up (Tablets) */
+@media (min-width: 768px) {
+
+}
+
+/* Large and up (Desktops) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra Large and up (Wide Screen Desktops) */
+@media (min-width: 1200px) {
+
+}
