@@ -115,7 +115,7 @@ body {
     }
     
     .logo {
-      visibility: :hidden;
+      visibility: hidden;
       display: none;
     }
 	
@@ -159,7 +159,7 @@ body {
     	height: 250px;
   	}
     .logo {
-      visibility: :visible;
+      visibility: visible;
       display: flex;
       width: 100px;
       height: 100px;
