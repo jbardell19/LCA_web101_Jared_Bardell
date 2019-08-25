@@ -158,7 +158,12 @@ body {
     	width: 250px;
     	height: 250px;
   	}
-
+    .logo {
+      visibility: :visible;
+      display: flex;
+      width: 100px;
+      height: 100px;
+    }
 }
 
 /* Large and up (Desktops) */
