@@ -1,16 +1,4 @@
-h1 {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    font-size: 20px;
-    color: #3498db;
-    padding-top:0px;
-}
 
-h2 {
-    color: white;
-    font-style: bold;
-    text-align: center;
-}
 
 
 body{
@@ -18,18 +6,19 @@ body{
     background-repeat: no-repeat;
 }
 
-.container {
-    display: grid;
+.container{
+    display:grid;
     grid-gap: 5px;
-    grid-template-columns: repeat (3, 1fr);
-    grid-template-rows: 140px 200px 40px;
+    grid-template-areas: 
+    "header"
+    "calculator"
+    "todos"
+    "aside";
 }
-
-.header {
-    background-color: black;
-    grid-column: 1/-1;
+.header{
+    grid-area: header;
+    height:40px;
     
-
 }
 
 .calculator{
@@ -48,7 +37,7 @@ body{
 
 input{
     background: white;
-    width: 100%;
+    width: 25%;
     box-sizing: border-box;
     height:50px ;
     font-size: 20px;
@@ -108,7 +97,7 @@ button:hover {
 #todo{
     margin: 0 auto ;
     box-shadow: 0 0 1em black;
-    max-width: 400px;
+    max-width: 100px;
     height:100%;
     background:white;
     position:relative;
@@ -148,8 +137,8 @@ button:hover {
 }
 .todos li{
     background: #f7f7f7;
-    height:50px;
-    line-height: 50px;
+    height:20px;
+    line-height: 20px;
     cursor: pointer;
     font-size: 20px;
 }
@@ -184,84 +173,429 @@ button:hover {
     text-align: center; 
     margin-top: 25px;
 }
-/*  if screen size less than 450px, resize tips lists and close btn so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
-    }
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
-    
+
+      
+
+/* Mobile-first style */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-image: url("https://live.staticflickr.com/2817/32736014784_fcc8c78e6d_h.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #3498db;
+    padding-top:0px;
 }
-      
-      /*.calculator {
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100px;
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding-top: 20px;
+	text-align:center;
+	color:#ffffff;
+}
+
+a {
+	color:#ffffff;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin: 5px 5px;
+    padding-right: 10px;
+  }
+
+main{
+    grid-area: main;
+    min-height: calc(100vh - 175px);
+    padding: 20px 6px;  
+}
+
+nav{
+    grid-area: nav;
+}
+
+aside{
+    grid-area: aside;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+.clock{
+    width:80%;
+    min-width: 140px;
+    height:65px;
+    max-height: 65px;
+    border-radius: 5px;
+    color:#ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:bold;
+    font-size:26px;
+    padding:5px 2px;
+    margin: 3px auto;
+    text-align: center;
+}
+
+
+#calculator {
+    /* display:none; */
+	width: 200px;
+	padding: 8px 8px 20px 8px;
+	margin: 20px auto;
+	background-color: #ABABAB;
+	border-radius: 4px;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #C1C1C1;
+	border-left: 2px solid #C1C1C1;
+	box-shadow: -3px 3px 7px rgba(0, 0, 0, .6), inset -100px 0px 100px rgba(255, 255, 255, .5);
+}
+
+#display {
+	display: block;
+	margin: 15px auto;
+	height: 42px;
+	width: 174px;
+	padding: 0 10px;
+	border-radius: 4px;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	background-color: #FFF;
+	box-shadow: inset 0px 0px 10px #030303, inset 0px -20px 1px rgba(150, 150, 150, .2);
+	font-size: 28px;
+	color: #666;
+	text-align: right;
+	font-weight: 400;
+}
+
+.button {
+	display: inline-block;
+	margin: 2px;
+	width: 42px;
+	height: 42px;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 4px;
+}
+
+
+#clearButton:hover {
+	background-color: #FFBA75;
+	box-shadow: 0px 0px 2px #FFBA75, inset 0px -20px 1px #FF8000;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #AE5700;
+	border-left: 2px solid #AE5700;
+}
+
+#clearButton {
+	color: #FFF;
+	text-shadow: -1px -1px 0px #44006F;
+	background-color: #D20000;
+	border-top: 2px solid #FF8484;
+	border-right: 2px solid #FF8484;
+	border-bottom: 2px solid #800000;
+	border-left: 2px solid #800000;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #B00000;
+}
+
+
+#gd-calendar{
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-gap: 5px;
+    width: 250px;
+    grid-auto-rows: minmax(35px, auto);
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #c1c1c1;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    background-color: rgb(204,204,204, 0.5);
+}
+
+#gd-calendar-year{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	text-align:center;
+    grid-column: 1/ span 7;
+}
+
+.gd-calendar-week{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 200;  
+    color: #fff;  
+}
+
+.gd-calendar-date{
+    font-size: 16px;
+    font-weight: bold;
+    /* border: 1px solid #000; */
+    color: #fff;
+}
+
+.otherMonth{
+    color: #c0c0c0;
+    font-weight: 100;
+}
+
+
+#gd_calculator{
+    display:grid;
+    width:250px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    grid-auto-rows: minmax(35px, auto);
+    padding: 15px 15px 15px 10px; 
+    border-radius: 4px;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+#gd_display{
+    grid-column: 1/ span 4;
+    border-radius: 4px;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #FFF;
+	border-left: 2px solid #FFF;
+	background-color: #FFF;
+	box-shadow: inset 0px 0px 10px #030303, inset 0px -20px 1px rgba(150, 150, 150, .2);
+	font-size: 28px;
+	color: #666;
+	text-align: right;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.gd-button{
+    width: 40px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+    border-radius: 4px;
+    margin:5px;
+}
+
+.gd-digits{
+    color: #181818;
+	text-shadow: 1px 1px 0px #FFF;
+	background-color: #EBEBEB;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	border-bottom: 2px solid #C1C1C1;
+	border-left: 2px solid #C1C1C1;
+	border-radius: 4px;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #DCDCDC;
+}
+
+.gd-mathButtons{
+    color:#ffffff;
+    text-shadow: -1px -1px 0px #44006F;
+	background-color: #434343;
+	border-top: 2px solid #C1C1C1;
+	border-right: 2px solid #C1C1C1;
+	border-bottom: 2px solid #181818;
+	border-left: 2px solid #181818;
+	box-shadow: 0px 0px 2px #030303, inset 0px -20px 1px #2E2E2E;
+}
+
+/* To Do List Styles */
+
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  margin: 0 0 0 20px;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+.header {
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin: 0;
+  /*border: none;
+  border-radius: 0;*/
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 24%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+/* End To Do List Styles */
+
+/* Media Queries */
+
+@media(min-width:320px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "main"
+        "nav"
+		"aside";
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+		padding-bottom:20px;
+		margin-right: 20px;
+    }
+
+    main {
+        padding: 10px;
       }
-      
-      .calculator-screen {
-        width: 100%;
-        font-size: 5rem;
-        height: 70px;
-        border: none;
-        background-color: #252525;
+}
+
+@media(min-width:768px){
+    .container{
+        grid-template-columns: 2fr;
+        grid-template-areas: 
+        "main main"
+        "nav aside";
+    }
+    nav ul {
+        flex-direction: column;
+      }
+
+    main{
+        font-size: 20px;
         color: #fff;
-        text-align: right;
-        padding-right: 20px;
-        padding-left: 10px;
+    }
+}
+
+@media(min-width:976px){
+    .container{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "aside1 main banner"
+        "footer footer footer";
+    }
+    nav ul {
+        flex-direction: column;
       }
-      
-      button {
-        height: 30px;
-        background-color: #fff;
-        border-radius: 3px;
-        border: 1px solid #c4c4c4;
-        background-color: transparent;
-        font-size: 2rem;
-        color: #333;
-        background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
-        text-shadow: 0 1px rgba(255,255,255,.4);
-      }
-      
-      button:hover {
-        background-color: #eaeaea;
-      }
-      
-      .operator {
-        color: #337cac;
-      }
-      
-      .all-clear {
-        background-color: #f0595f;
-        border-color: #b0353a;
+
+    main{
+        font-size: 20px;
         color: #fff;
-      }
-      
-      .all-clear:hover {
-        background-color: #f17377;
-      }
-      
-      .equal-sign {
-        background-color: #2e86c0;
-        border-color: #337cac;
-        color: #fff;
-      }
-      
-      .equal-sign:hover {
-        background-color: #4e9ed4;
-      }
-      
-      .calculator-keys {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-      
+    }
+}
