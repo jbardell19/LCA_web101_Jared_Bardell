@@ -17,9 +17,7 @@
   .section {
     height:324px;
     width: 850px;
-    background-color: grey;
-    height:324px;
-    width: 850px;
+    margin: 0 auto;
     background-color: grey;
     -webkit-column-count: 3; /* Chrome, Safari, Opera */
     -moz-column-count: 3; /* Firefox */
