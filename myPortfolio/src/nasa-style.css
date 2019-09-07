@@ -1,5 +1,5 @@
 *{
-    font-family: "Palatino Linotype", serif;
+    font-family: 'Lato', sans-serif;
   }
   
   .main {
@@ -7,25 +7,31 @@
     height: 450px;
     width: 850px;
     background-image: url("https://i.ibb.co/WkztMp7/nasa-background.jpg") ;
-    
+    margin: 0 auto;
     justify-content: center;
     align-items:center;
     margin-bottom: 20px;
+
   }
   
   .section {
-      height:324px;
-      width: 850px;
-      background-color: grey;
-      -webkit-column-count: 3; /* Chrome, Safari, Opera */
-      -moz-column-count: 3; /* Firefox */
-      column-count: 3;
-      column-width: 270px;
-      -moz-column-width:270px;
-      -webkit-column-width:270px;
-      column-gap: 20px;
-      -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-      -moz-column-gap: 20px; /* Firefox */
+    height:324px;
+    width: 850px;
+    background-color: grey;
+    height:324px;
+    width: 850px;
+    background-color: grey;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    column-width: 270px;
+    -moz-column-width:270px;
+    -webkit-column-width:270px;
+    column-gap: 20px;
+    -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 20px; /* Firefox */
+   
+      
   }
   
   h1 {
