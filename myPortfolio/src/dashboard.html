@@ -5,121 +5,52 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./dashboard-style.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
 <title>Dash</title>
-<script> 
-        //function that display value 
-        function dis(val) 
-        { 
-            document.getElementById("result").value+=val 
-        } 
-          
-        //function that evaluates the digit and return result 
-        function solve() 
-        { 
-            let x = document.getElementById("result").value 
-            let y = eval(x) 
-            document.getElementById("result").value = y 
-        } 
-          
-        //function that clear the display 
-        function clr() 
-        { 
-            document.getElementById("result").value = "" 
-        } 
-     </script> 
-     <!-- for styling -->
-     <style> 
-        .title{ 
-        margin-bottom: 10px; 
-        text-align:center; 
-        width: 210px; 
-        color:green; 
-        border: solid black 2px; 
-        } 
- 
-        input[type="button"] 
-        { 
-        background-color:green; 
-        color: black; 
-        border: solid black 2px; 
-        width:100% 
-        } 
- 
-        input[type="text"] 
-        { 
-        background-color:white; 
-        border: solid black 2px; 
-        width:100% 
-        } 
-     </style> 
-  </head>
-  
-  <body>
-      <div class="container">
-          <div class="main">
-              <h1>Welcome Jared</h1>
-              <h2>Wednesday, September 4th 2019</h2>
-              <h2>The time is: 11:21am</h2>
-              
-          </div>
-          <div class="calculator">Calculator
-                <table border="1"> 
-                   <tr> 
-                      <td colspan="3"><input type="text" id="result"/></td> 
-                      <!-- clr() function will call clr to clear all value -->
-                      <td><input type="button" value="c" onclick="clr()"/> </td> 
-                   </tr> 
-                   <tr> 
-                      <!-- create button and assign value to each button -->
-                      <!-- dis("1") will call function dis to display value -->
-                      <td><input type="button" value="1" onclick="dis('1')"/> </td> 
-                      <td><input type="button" value="2" onclick="dis('2')"/> </td> 
-                      <td><input type="button" value="3" onclick="dis('3')"/> </td> 
-                      <td><input type="button" value="/" onclick="dis('/')"/> </td> 
-                   </tr> 
-                   <tr> 
-                      <td><input type="button" value="4" onclick="dis('4')"/> </td> 
-                      <td><input type="button" value="5" onclick="dis('5')"/> </td> 
-                      <td><input type="button" value="6" onclick="dis('6')"/> </td> 
-                      <td><input type="button" value="-" onclick="dis('-')"/> </td> 
-                   </tr> 
-                   <tr> 
-                      <td><input type="button" value="7" onclick="dis('7')"/> </td> 
-                      <td><input type="button" value="8" onclick="dis('8')"/> </td> 
-                      <td><input type="button" value="9" onclick="dis('9')"/> </td> 
-                      <td><input type="button" value="+" onclick="dis('+')"/> </td> 
-                   </tr> 
-                   <tr> 
-                      <td><input type="button" value="." onclick="dis('.')"/> </td> 
-                      <td><input type="button" value="0" onclick="dis('0')"/> </td> 
-                      <!-- solve function call function solve to evaluate value -->
-                      <td><input type="button" value="=" onclick="solve()"/> </td> 
-                      <td><input type="button" value="*" onclick="dis('*')"/> </td> 
-                   </tr> 
-                </table> 
+<style>
 
+</style>
+<body>
 
-          </div>
-          <div class="todos">To Do List</div>
-          
-
-            <input type = "text" placeholder="Add New Todo">
-
-            <ul class="todos">
+                <div class="grid-container">
+                    
+                        <form name="calculator">
+                            <input type="text" name="answer"/>
+                            <br>
+                            <input type="button" value=" 1 " onclick="calculator.answer.value +='1'"/>
+                            <input type="button" value=" 2 " onclick="calculator.answer.value +='2'"/>
+                            <input type="button" value=" 3 " onclick="calculator.answer.value +='3'"/>
+                            <input type="button" value=" + " onclick="calculator.answer.value +='+'"/>
+                            <br/>
+                            <input type="button" value=" 4 " onclick="calculator.answer.value +='4'"/>
+                            <input type="button" value=" 5 " onclick="calculator.answer.value +='5'"/>
+                            <input type="button" value=" 6 " onclick="calculator.answer.value +='6'"/>
+                            <input type="button" value=" - " onclick="calculator.answer.value +='-'"/>
+                            </br>
+                            <input type="button" value=" 7 " onclick="calculator.answer.value +='7'"/>
+                            <input type="button" value=" 8 " onclick="calculator.answer.value +='8'"/>
+                            <input type="button" value=" 9 " onclick="calculator.answer.value +='9'"/>
+                            <input type="button" value=" x " onclick="calculator.answer.value +='*'"/>
+                            </br>
+                            <input type="button" value=" c " onclick="calculator.answer.value=''"/>
+                            <input type="button" value=" 0 " onclick="calculator.answer.value +='0'"/>
+                            <input type="button" value="=" onclick="calculator.answer.value=eval(calculator.answer.value)"/>
+                            <input type="button" value=" / " onclick="calculator.answer.value +='/'"/>
+                            </br>
+                        </form>
+                    </div>
+                    <div class="Greeting">
+                        <h1>Hello Jared</h1>
+                        <h2>Today is Sunday September 8, 2019</h2>
+                        <h2>The time is 12:54pm</h2>
+                    </div>
+                    <div class="To-do\ list">
+                        <h1>My To-Do List</h1>
+                        
+                    </div>
                 
-                <li><span><i class="fas fa-trash-alt"></i></span>Go to the salon</li>
-                <li><span><i class="fas fa-trash-alt"></i></span>Go to class</li>
-                <li><span><i class="fas fa-trash-alt"></i></span>Meet with Sally</li>
-            </ul>
-
-            <div id= "buttons">
-                <button class="save">Save</button>
-                <button class="clear">Clear</button>
-            </div>
-           
-      </div>
-      
-  </body>
+</body>
 </html>
 
 
