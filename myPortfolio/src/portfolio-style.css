@@ -1,46 +1,117 @@
+/* work page desktop */
+.header{
 
-
-
-h1{
-    font-size: 35px;
     font-family: 'Pacifico', cursive;
-    grid-column: 2/3;
+    text-align: center;
+    color: #2d3436;
 }
 
-h2{
+h3{
     font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-}
-.grid {
-    display: grid;
-    grid-template-columns: 200px auto 200px;
-    grid-template-rows: repeat(3, 300px);
-    grid-gap: 1em;
-  }
-  
-  header,
-  aside,
-  article,
-  footer {
-    background: #eaeaea;
-    padding: 1em;
-    justify-items: center;
 
-  }
-  
-  header, footer {
-    grid-column: 1 / 4;
-  }
-  
-  /* Demo Specific Styles */
-  body {
-    margin: 0 auto;
-    max-width: 56em;
-    padding: 1em 0;
-  }
-  
-  .grid > * {
+}
+
+.nav {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+}
+
+.nav > a {
+  transition: color .5s;
+  color: #000000;
+}
+
+.nav > a:hover {
+    color:#2d3436;
+}
+
+#wrapper {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 932px;
+    margin: auto;
+}
+
+.box1{
+    width: 300px;
+    height: 300px;
+    background-image: url("https://neilpatel.com/wp-content/uploads/2017/02/blogging.jpg"); 
+
+}
+
+.box2{
+    width: 300px;
+    height: 300px;
+    background-image: url("https://media.licdn.com/dms/image/C561BAQHrxN7ELDqjRg/company-background_10000/0?e=1568703600&v=beta&t=E2LTPXdYWbz3plzAC_VLiDHTGIRy2wfwjg6AZzMqDZk"); 
+
+}
+
+.box3{
+    width: 300px;
+    height: 300px;
+    background-image: url("https://www.timeatlas.com/wp-content/uploads/momentum-dashboard1.png"); 
+
+}
+
+.box4{
+    width: 300px;
+    height: 300px;
+    background-image: url(""); 
+
+}
+
+.box5{
+    width: 300px;
+    height: 300px;
+    background-image: url(""); 
+
+}
+
+.box6{
+    width: 300px;
+    height: 300px;
+    background-image: url(""); 
+
+}
+
+.transparency {
+    width: 100%;
+    height: 100%;
+    background-color: #2d3436;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    opacity: 7;
+    transition: opacity 1s;
+}
+
+.transparency:hover {
+    opacity: .5;
+}
+
+p {
+    text-align: center;
+    font-family: "Menlo";
+    color: #ffffff;
+}
+
+/* work page mobile */
+
+@media (max-width: 576px) {
+    #wrapper {
+        grid-template-columns: 1fr;
+        width: 300px;
+    }
+
+    .transparency {
+        opacity: .5;
+    }
+
+    .nav > a {
+        color: #FF3575;
+    }
+}

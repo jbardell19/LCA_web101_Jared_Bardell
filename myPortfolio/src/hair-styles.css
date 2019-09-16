@@ -1,3 +1,71 @@
-h1{
-    font-family: 'Courier New', Courier, monospace;
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    padding:2px;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    background-color: grey;
+    height: 100px;
+}
+
+nav > a {
+    margin: 2% 1% 2%;
+    height: 35px;
+    width: 15%;
+    color: #fff;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif; */
+    font-size: 18px;
+    border-radius: 4px;
+    background: #000;
+    text-align: center;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top:15px;
+  }
+
+  nav > a:hover {
+    font-weight: bold;
+  }
+  
+  .has-border {
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: none;
+    padding: 15px 20px; 
+  }
+  
+  nav {
+    grid-column:2/3;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+.logo{
+    width:150px;
+    height:50px;    
+    background-image:url(https://f271.https.cdn.softlayer.net/80F271/dal05.objectstorage.softlayer.net/v1/AUTH_b4a3a2ca-226e-4f3c-aef2-b5275f5900cc/cdn/preview/hairstylesalon/images/bg-logo.png);
+    background-repeat: repeat-x;
+    margin:0px 20px 10px 100px;
+    position:fixed;
+    top:75px;
+    text-align: center;  
+    grid-column: 1/2; 
+    padding-top:25px;
+}
+
+.logo > a{
+    text-decoration: none;
+    color:#fff;
+
 }
