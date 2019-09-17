@@ -1,71 +1,351 @@
-*{
-    margin:0;
-    padding:0;
+body {
+	background: #fff;
+	font-family: 'Roboto', Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0;
+	min-width: 960px;
+	padding: 0;
 }
 
-body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 18px;
-    padding:2px;
+#header {
+	margin: 0 auto;
+	padding: 44px 0 50px;
+	text-align: center;
+    width: 960px;
 }
 
-header{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    width: 100%;
-    background-color: grey;
-    height: 100px;
+#header a.logo {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 340px;
 }
 
-nav > a {
-    margin: 2% 1% 2%;
-    height: 35px;
-    width: 15%;
-    color: #fff;
-    /* font-family: Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif; */
-    font-size: 18px;
-    border-radius: 4px;
-    background: #000;
-    text-align: center;
-    border: 2px solid white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-top:15px;
-  }
-
-  nav > a:hover {
-    font-weight: bold;
-  }
-  
-  .has-border {
-    border-radius: 5px;
-    border: 2px solid #fff;
-    background: none;
-    padding: 15px 20px; 
-  }
-  
-  nav {
-    grid-column:2/3;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-.logo{
-    width:150px;
-    height:50px;    
-    background-image:url(https://f271.https.cdn.softlayer.net/80F271/dal05.objectstorage.softlayer.net/v1/AUTH_b4a3a2ca-226e-4f3c-aef2-b5275f5900cc/cdn/preview/hairstylesalon/images/bg-logo.png);
-    background-repeat: repeat-x;
-    margin:0px 20px 10px 100px;
-    position:fixed;
-    top:75px;
-    text-align: center;  
-    grid-column: 1/2; 
-    padding-top:25px;
+#header a.logo img {
+	border: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
-.logo > a{
-    text-decoration: none;
-    color:#fff;
-
+#header ul {
+	margin: 0;
+	padding: 56px 0 0;
 }
+
+#header ul li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0 19px;
+}
+
+#header ul li span {
+	color: #252525;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 3px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#body {
+	margin: 0;
+	padding: 0 0 30px;
+	text-align: center;
+}
+
+#body > div {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+}
+
+#body > div img {
+	border: 2px solid #292929;
+	margin: 24px 0 0;
+    padding: 0;
+    width:100%;
+}
+
+#body div ul li {
+	border: 2px solid #1a1a1a;
+	display: block;
+	list-style: none;
+	margin: 0 0 13px;
+	overflow: hidden;
+	padding: 0;
+}
+
+#body div ul li img {
+	border: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	opacity: 0.8;
+}
+
+#body #featured {
+	margin: 0 0 13px;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+#body #featured img {
+	border: 0;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#body #featured div {
+	left: 50%;
+	margin-left: -480px;
+	margin-top: -171px;
+	padding: 0 0 0 470px;
+	position: absolute;
+	top: 50%;
+	text-align: left;
+	width: 490px;
+}
+
+#body #featured div h2 {
+	background: #fff;
+	color: #000;
+	display: inline-block;
+	font-family: 'Oswald';
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0 0 18px;
+	padding: 23px 27px 20px;
+	text-transform: uppercase;
+}
+
+#body #featured div span {
+	background: #252525;
+	color: #fff;
+	display: inline-block;
+	font-size: 20px;
+	margin: 7px 0;
+	padding: 12px 27px;
+}
+
+#body > ul {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 24px 0 0;
+	width: 960px;
+}
+
+#body > ul li {
+	display: block;
+	float: left;
+	margin: 0 10px 20px;
+	padding: 0;
+	width: 300px;
+}
+
+#body > ul li img {
+	color: black;
+	height: 242px;
+	width: 300px;
+	border: 2px solid black;
+	display: block;
+	margin: 0;
+	padding: 0;
+	opacity: .8;
+}
+
+#body > ul li span {
+	display: block;
+	margin: 0;
+	padding: 33px 0 0;
+	font-family: 'Oswald', sans-serif;;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#footer {
+	background: #252525;
+	margin: 0;
+	padding: 36px 0 42px;
+}
+
+#footer div {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	width: 960px;
+}
+
+#footer div ul {
+    color: white;
+	display: block;
+	float: right;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 256px;
+}
+
+#footer div ul li {
+	display: block;
+	float: left;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	width: 44px;
+}
+
+/*MEDIA QUERY*/
+
+@media screen and (max-width: 700px) {
+	body {
+		min-width: 0;
+	}
+	
+	#header {
+		padding: 20px 0;
+		position: relative;
+		width: 100%;
+	}
+	
+	#header a.logo {
+		width: 80%;
+	}
+	
+	#header a.logo img {
+		width: 100%;
+	}
+	
+	#header ul {
+		margin: 0;
+		padding: 56px 0 0;
+	}
+	
+	#header ul li {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0 19px;
+	}
+	
+	#body {
+		width: 100%;
+	}
+	
+	#body > div {
+		padding: 0 5%;
+		width: 90%;
+	}
+	
+	#body > div img {
+		border: 2px solid #292929;
+		margin: 24px 0 0;
+		padding: 0 5%;
+		width:98%;
+	}
+	
+	#body div ul li {
+		border: 2px solid #1a1a1a;
+		display: block;
+		list-style: none;
+		margin: 0 0 13px;
+		overflow: hidden;
+		padding: 0;
+	}
+	
+	#body div ul li img {
+		border: 0;
+		display: block;
+		margin: 0;
+		padding: 0;
+		opacity: 0.8;
+	}
+	
+	#body #featured {
+		overflow: hidden;
+		margin: 0 0 20px;
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+	
+	#body #featured img {
+		border: 0;
+		display: block;
+		margin: 0;
+		padding: 0;
+		min-width: 96%;
+	}
+	
+	#body #featured div {
+		left: 0;
+		margin: 0;
+		padding: 0 2%;
+		position: absolute;
+		top: 0;
+		text-align: left;
+		width: 96%;
+	}
+	
+	#body #featured div h2 {
+		margin: 50px 0 10px;
+		padding: 10px;
+		text-transform: uppercase;
+	}
+	
+	#body #featured div span {
+		background: #252525;
+		color: #fff;
+		display: inline-block;
+		font-size: 14px;
+		margin: 10px 0;
+		padding: 10px;
+	}
+
+	#body > ul {
+		margin: 0 auto;
+		overflow: visible;
+		padding: 0 5%;
+		width: 90%;
+	}
+	
+	#body > ul li {
+		float: none;
+		margin: 0;
+		width: 100%;
+	}
+	
+	#body > ul li img {
+		width: 98%;
+	}
+	
+	#body > ul li span {
+		padding: 15px 0;
+	}
+	
+	#footer {
+		padding: 10px;
+	}
+	
+	#footer div {
+		overflow: visible;
+		width: 100%;
+	}
+	
+	#footer div ul {
+		float: none;
+		margin: 0 auto;
+		width: 256px;
+	}
