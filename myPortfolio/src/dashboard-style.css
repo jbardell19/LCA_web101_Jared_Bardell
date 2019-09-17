@@ -1,18 +1,12 @@
 /* Mobile-first style */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-image: url("https://live.staticflickr.com/2817/32736014784_fcc8c78e6d_h.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-  }
+
 
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 36px;
-    font-weight: 500;
-	text-align:center;
-	margin-top: 20%;
+    text-align:center;
+    justify-content: center;
+	margin-top: auto;
     color:#ffffff;
     font-style: bold;
 }
@@ -25,24 +19,117 @@ h2 {
 	color:#ffffff;
 }
 
-.items{
-    color: white;
+body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 90% 25% 25%;
+    font-size: 25px;
+    background-image: url("https://live.staticflickr.com/2817/32736014784_fcc8c78e6d_h.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-areas: 
+    "main header"
+    ".    header"
+    ".    aside"
+    ".    aside2";
+
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 200px 500px 200px;
-    grid-template-rows: 90px 10px;
-    grid-template-areas: "Calculator . . To-dolist" "Greeting Greeting Greeting Greeting" ". . . .";
-    place-items: center center;
+.our-grid-item{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+nav {
+    grid-area: header;
+    color: #e67e22;
+    font-size: 65px:
+}
+main {
+grid-area: main;
+min-height: (100vh - 54px );
+     background-attachment: green;
+     color:yellow;
+     font-size: 30px;
+  }
+.calc {
+    grid-area: aside;
+  }
+
+  #calc-contain{
+    position: relative;
+    width: 325px;
+    border: 2px solid #e67e22;
+    border-radius: 12px;
+    margin: 0px auto;
+  }
+  #agh{
+    position: relative;
+    float: right;
+    margin-top: 15px;
+  }
+  #agh p{
+    font-size: 20px;
+    font-weight: 900;
+  }
+  input[type=button] {
+    background: #e67e22;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 7px;
+    margin-left: 11px;
+    margin-top: 19px;
+  }
+  input[type=button]:active {
+    background-color:#e67e22;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  input[type=button]:hover {
+    background-color: #e67e22;
+    color: white;
   }
   
-  .Calculator { grid-area: Calculator; }
+  input[type = text] {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 4px 0px 12px black inset;
+  }
   
-  .Greeting { grid-area: Greeting;
+          
+footer {
+    grid-area: footer;
+    text-decoration-color: #cc4343;
+    .nav ul {
+        grid-area: nav;
+    }
+  }
+  .figure {
+      grid-area; aside;
+  }
 
-}
+  @media (max-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 4fr 1fr; 
+      grid-template-areas: 
+      "header  aside"
+      "main    aside2";
+    }
+    @media (max-width: 350px){
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 
+            "header"
+            "main"
+            "aside"
+            "aside2"
+        }
 
-
-
-
+    }
