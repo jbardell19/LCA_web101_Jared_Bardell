@@ -1,0 +1,75 @@
+h1{
+    font-family: 'Pacifico', cursive;
+    color:#bdc3c8;
+    left: 0;
+    font-size: 45px;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%
+    
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    color: #bdc3c6;
+    left: 0;
+    font-size: 25px;
+    line-height: 330px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%
+    
+}
+
+#profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+   
+  }
+
+.main{
+
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 54%; 
+    margin-left: -100px;
+    margin-top: -300px;
+
+}
+
+.nav {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+    align-items: center;
+    color: #3498db;
+    
+}
+
+body {
+      background-color: #2980b9;
+    }
+
+.button{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 54%; 
+    margin-left: -50px;
+    margin-top: 150px;
+    
+   
+    }
+

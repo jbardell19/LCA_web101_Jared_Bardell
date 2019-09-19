@@ -20,7 +20,7 @@ h3{
 }
 
 .nav > a {
-  transition: color .5s;
+  transition: color .4s;
   color: #000000;
 }
 
@@ -108,7 +108,7 @@ p {
     }
 
     .transparency {
-        opacity: .5;
+        opacity: .4;
     }
 
     .nav > a {
