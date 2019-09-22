@@ -1,0 +1,44 @@
+h1 {
+
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;    
+}
+
+.about-me{
+
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #2d3436;
+    font-size: 30px;
+
+}
+
+p{
+
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+.header{
+
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #2d3436;
+}
+
+.nav {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    align-items: center;
+}
+
+.nav > a {
+  transition: color .4s;
+  color: #000000;
+}
+
+.nav > a:hover {
+    color:#2d3436;
+}
