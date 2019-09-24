@@ -1,0 +1,132 @@
+#id_of_element {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#timings {
+    position: relative;
+    width: 530px;
+    height: 730px;
+    margin: 0 auto 10px;
+    border: 1px #aaa solid;
+    padding: 10px;
+}
+.shadow {
+    -webkit-box-shadow: 5px 5px 5px #16a085;
+    -moz-box-shadow: 5px 5px 5px #16a085;
+    box-shadow: 5px 5px 5px #16a085;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #2980b9;
+  }
+
+  .center {
+
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+
+  }
+
+  #timings_demo {
+    position:relative;
+    width:530px;
+    height:530px;
+    margin:0 auto 10px;
+    border:1px #aaa solid;
+    padding:10px;
+  }
+  .test_box {
+    font-size:10px;
+    position:relative;
+    width:50px;
+    height:50px;
+    margin-bottom:10px;
+    background-color:#eee;
+  }
+  .test_box p {
+    text-align:center;
+    padding-top:4px;
+  }
+  #push.test_box {
+    -webkit-transition: all 4s ease;
+-moz-transition: all 4s ease;
+-o-transition: all 4s ease;
+transition: all 4s ease;    border:4px #f00 solid;
+  }
+  #pull.test_box {
+    -webkit-transition: all 3s ease-in;
+-moz-transition: all 4s ease-in;
+-o-transition: all 4s ease-in;
+transition: all 4s ease-in;    border:4px #8e44ad solid;
+  }
+
+  #ease-in-out.test_box{
+    -webkit-transition: all 4s ease-in;
+    -moz-transition: all 4s ease-in;
+    -o-transition: all 4s ease-in;
+    transition: all 4s ease-in;    border:4px #0f0 solid;
+      }
+  
+  #ease-out.test_box {
+    -webkit-transition: all 4s ease-out;
+-moz-transition: all 4s ease-out;
+-o-transition: all 4s ease-out;
+transition: all 4s ease-out;    border:4px #2980b9 solid;
+  }
+  #tumbleweed.test_box {
+    -webkit-transition: all 4s ease-in-out;
+-moz-transition: all 4s ease-in-out;
+-o-transition: all 4s ease-in-out;
+transition: all 4s ease-in-out;    border:4px #f1c40f dashed;
+  }
+  #tubular.test_box {
+    -webkit-transition: all 4s linear;
+-moz-transition: all 4s linear;
+-o-transition: all 4s linear;
+transition: all 4s linear;    border:4px #3498db solid;
+  }
+  #sweet.test_box {
+    -webkit-transition: all 4s cubic-bezier(1.000, 0.895, 0.000, 0.945);
+-moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+-o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);    border:4px #c0392b dotted;
+  }
+  #cool.test_box {
+    -webkit-transition: all 4s cubic-bezier(1.000, 0.895, 0.000, 0.945);
+-moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+-o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);    border:4px #27ae60 dashed;
+  }
+  #negative.test_box {
+    -webkit-transition: all 4s cubic-bezier(1.000, -0.575, 0.405, 1.425);
+-moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+-o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);    border:4px #d35400 dotted;
+  }
+  #timings:hover .test_box, #timings .hover_effect .test_box {
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
+    -webkit-transform: rotate(720deg);
+-moz-transform: rotate(720deg);
+-o-transform: rotate(720deg);
+-ms-transform: rotate(720deg);
+transform: rotate(720deg);    margin-left:420px;
+    background-color:#fff;
+    
+  
+  }
+
+  #timings:hover .grow .test_box .hover_effect
+{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+}
