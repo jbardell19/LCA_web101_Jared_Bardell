@@ -1,0 +1,75 @@
+body {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+}
+.upper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    background-color: #2BCDC0;
+    color: #ffffff;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+nav {
+    width: 30%;
+}
+nav > a {
+    text-decoration: none;
+}
+#active {
+    font-size: 28px;
+    color: #F5EAEC;
+}
+#inactive {
+    margin-right: 8%;
+    font-size: 28px;
+    color: black;
+    transition: all 0.25s ease-in-out;
+}
+#inactive:hover {
+    color: #F5EAEC;
+}
+#facebook {
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 10%;
+    transition: all 0.75s ease-in-out
+}
+#facebook:hover {
+    transform: rotate(360deg);
+}
+#instagram {
+    width: 10%;
+    transition: all 0.75s ease-in-out;
+}
+#instagram:hover {
+    transform: rotate(360deg)
+}
+h1 {
+    font-family: 'PT Serif', serif;
+    font-size: 60px;
+    color: #F5EAEC;
+}
+.lower {
+    padding: 5% 5% 5% 5%;
+    background-color: #1B1B1B;
+    color: #ffffff;
+    font-family: 'PT Serif', serif;
+    line-height: 25px;
+}
+@media (max-width: 450px) {
+    nav {
+        width: 100%;
+    }
+    h1 {
+        font-family: 'PT Serif', serif;
+        font-size: 36px;
+        color: #F5EAEC;
+    }
+}
