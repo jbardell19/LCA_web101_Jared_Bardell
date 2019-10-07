@@ -1,84 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="./dashboard-style.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-
-<title>Dash</title>
-<style>
-
-</style>
-
-
-<body class="container">
-    <nav>
-    <header>
-        To Do List
-    </header>
-                <ul>
-            <li>Pick up apples</li>
-            <li>Gym</li>
-            <li>Goto class</li>
-        </ul>
-        </nav>
-    <main>
-        
-        Hello Jared!
-        <article>    
-        Today is September 16th 2019
-        
-        </article>
-        The time is 10:39pm
-        
-    </main>
-    <aside>
-
-        <div class=calc>
-            <div id='calc-contain'>
-                
-                <form name="calculator">
-                    
-                    <input type="text" name="answer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../src/dashboard-style.css">
+    <link rel="stylesheet" href="./animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Griffy&display=swap" rel="stylesheet">
+    <title>Dashboard</title>
+    <script>
+            var display=setInterval(function(){Time()},0);
+            
+            function Time()
+            {
+            var date=new Date();
+            var time=date.toLocaleTimeString();
+            document.getElementById("example").innerHTML=time;
+            }
+            </script>
+</head>
+<body>
+    <aside class="animated wobble delay-1s">
+            <div id='calc'>
+                    <form name="calculator">
+                    <input class="inputCalc" type="text" name="answer" placeholder="0"/>
                     <br>
-                    
                     <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
                     <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
                     <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
-                    <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
-                    <br />
-                    
+                    <input id="plus" type="button" value=" + " onclick="calculator.answer.value += '+'" />
+                    <br/>            
                     <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
                     <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
                     <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
-                    <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
-                </br>
-                
-                <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
-                <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
-                <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
-                <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
-            </br>
-            
-            <input type="button" value=" c " onclick="calculator.answer.value = ''" />
-            <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
-            <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
-            <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
-        </br>
-    </form>
-    
-    </div>
-</div>
-</aside>
-</div>
-<aside>
-<h1>You are never younger than you are right now, make today count</h1>
+                    <input id="minus" type="button" value=" - " onclick="calculator.answer.value += '-'" />
+                    <br/>          
+                    <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+                    <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+                    <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+                    <input id="mult" type="button" value=" x " onclick="calculator.answer.value += '*'" />
+                    <br/>           
+                    <input id="clear" type="button" value=" c " onclick="calculator.answer.value = ''" />
+                    <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+                    <input id="equal" type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+                    <input id="divide" type="button" value=" / " onclick="calculator.answer.value += '/'" />
+                      
+                    </form>
+    </aside>
+    <article class="animated rubberBand delay-1s" h1>Hello, Jared</h1>
+        <br>
+        <h1 id="example"></h1>
+        
+        <button onclick="getLocation()" class="animated infinite pulse delay-3s btn">Get Location!</button>
+        <p id="my-coordinates"></p>
+    </article>
+    <section class="animated wobble delay-1s">
+            <div id="board">
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column">
+                      <div class="disc red"></div>
+                    </div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                  </div>
+      
+     </div>
+    </section>
+    <section class="todo animated wobble delay-1s">
+      <h2><span class="styling">TODO</span>List</h2>
+        <div class="input_div">
+          <input class="input" type="text" placeholder="What do you want to do?">
+          <button class="addButton"><i class="fas fa-plus"></i></button>
         </div>
-    </figure>
-</div>
-<footer></footer>
-</div>
-</aside>
-</body>
+        <div class="container">
+          <div class="item">
+        </div>
+    </section>
+    <section>
+      
+    </section>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"></script>
+    <script src="../src/dashboard.js"></script>
+  </body>
+  </html>
+  
