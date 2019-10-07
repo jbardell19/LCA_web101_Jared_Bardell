@@ -1,6 +1,6 @@
 body,
 html {
-  height: 100vh;
+  height: 102vh;
 }
 body {
   margin: 0;
@@ -15,6 +15,13 @@ body {
   background-image: url("https://images5.alphacoders.com/367/367478.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  background-size: cover;
+}
+
+p{
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: orange;
 }
 h1 {
   font-size: 40px;
