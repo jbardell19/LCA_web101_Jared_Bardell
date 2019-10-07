@@ -157,6 +157,7 @@ input[type="text"] {
   background: #55efc4;
 }
 
+/*Game*/
 
 #board {
   display: flex;
@@ -170,6 +171,7 @@ input[type="text"] {
   flex-direction: column;
   justify-content: flex-end;
 }
+
 
 .disc {
   height: 50px;
@@ -193,6 +195,9 @@ input[type="text"] {
   clear: both;
   font-size: 50px;
 }
+
+/*To Do List*/
+
 .todo * {
   padding: 0;
   margin: 0;
@@ -281,6 +286,8 @@ input[type="text"] {
   cursor: pointer;
 }
 
+/*media query*/ 
+
 @media (max-width: 768px) {
   .container {
     display: grid;
@@ -298,6 +305,7 @@ input[type="text"] {
           "main"
           "aside"
           "aside2"
+          "calc"
       }
 
   }
